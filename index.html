@@ -31,37 +31,124 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h2>
+<a name="truecrypt" class="anchor" href="#truecrypt"><span class="octicon octicon-link"></span></a>TrueCrypt</h2>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Free open-source disk encryption software for Windows 7/Vista/XP, Mac OS X, and Linux.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<ul>
+<li><p>Creates a virtual encrypted disk within a file and mounts it as a real disk. </p></li>
+<li><p>Encrypts an entire partition or storage device such as USB flash drive or hard drive.</p></li>
+<li><p>Can encrypt a partition or drive where Windows is installed (pre-boot authentication).</p></li>
+<li><p>Provides plausible deniability, in case an adversary forces you to reveal the password (hidden volume or operating system).</p></li>
+</ul><p><a href="http://istruecryptauditedyet.com/">Is TrueCrypt Audited Yet?</a></p>
+
+<h3>
+<a name="download" class="anchor" href="#download"><span class="octicon octicon-link"></span></a><a href="http://www.truecrypt.org/downloads">Download</a>
+</h3>
+
+<h2>
+<a name="filevault" class="anchor" href="#filevault"><span class="octicon octicon-link"></span></a>FileVault</h2>
+
+<p>Provided by Apple on Mac operating systems, under System Preferences → Security &amp; Privacy.</p>
+
+<ul>
+<li><p><a href="http://support.apple.com/kb/ph7031">FileVault 1</a>: available in OS X versions 10.3 to 10.6. Encrypts a user's home directory.</p></li>
+<li><p><a href="http://support.apple.com/kb/ht4790">FileVault 2</a>: OS X Lion (10.7) and later. Full disk, XTS-AES 128 encryption.</p></li>
+<li><p>Some performance degradation is inevitable.</p></li>
+</ul><h2>
+<a name="bitlocker" class="anchor" href="#bitlocker"><span class="octicon octicon-link"></span></a><a href="http://windows.microsoft.com/en-us/windows7/products/features/bitlocker">BitLocker</a>
+</h2>
+
+<p>Provided by Microsoft on Windows 7 Ultimate and Enterprise Edition, under Control Panel → System and Security</p>
+
+<h2>
+<a name="luks" class="anchor" href="#luks"><span class="octicon octicon-link"></span></a><a href="https://code.google.com/p/cryptsetup/">LUKS</a>
+</h2>
+
+<p>Linux Unified Key Setup</p>
+
+<ul>
+<li><p>Standard for Linux hard disk encryption.</p></li>
+<li><p>Included in the installer of many modern distributions.</p></li>
+<li><p>Cryptsetup utility, based on dm-crypt kernel module, supports plain dm-crypt volumes, LUKS, loop-AES and TrueCrypt formats.</p></li>
+</ul><p>Example:</p>
+
+<pre><code>$ apt-get install cryptsetup
+$ cryptsetup luksFormat /dev/sda1
+$ cryptsetup luksOpen /dev/sda1 data
+$ mkfs.ext4 /dev/mapper/data
+$ mount -t ext4 /dev/mapper/data /media/data
+$ update-initramfs -u
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Also check out <a href="http://ecryptfs.org/">eCryptfs</a>.</p>
+
+<h2>
+<a name="gpg" class="anchor" href="#gpg"><span class="octicon octicon-link"></span></a>GPG</h2>
+
+<h2>
+<a name="off-the-record-messaging-otr" class="anchor" href="#off-the-record-messaging-otr"><span class="octicon octicon-link"></span></a>Off-the-record messaging (OTR)</h2>
+
+<p>Popular protocol for encryption, authentication, deniability, and perfect forward secrecy of instant messaging.</p>
+
+<p><a href="https://adium.im/">Adium</a> for Mac OS X</p>
+
+<p><a href="http://pidgin.im/">Pidgin</a> with <a href="https://otr.cypherpunks.ca/">pidgin-otr</a> plugin (Windows and Linux)</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="mobile" class="anchor" href="#mobile"><span class="octicon octicon-link"></span></a>Mobile</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Android: <a href="http://www.xabber.org/">Xabber</a> or ChatSecure</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>iPhone: <a href="https://chatsecure.org/">ChatSecure</a></p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h2>
+<a name="secure-calls-and-texts" class="anchor" href="#secure-calls-and-texts"><span class="octicon octicon-link"></span></a>Secure calls and texts</h2>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p>Get RedPhone and TextSecure for Android, both from <a href="https://whispersystems.org/">Open Whisper Systems</a>. Coming soon to iPhone.</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h2>
+<a name="recommended-browser-extensions" class="anchor" href="#recommended-browser-extensions"><span class="octicon octicon-link"></span></a>Recommended browser extensions</h2>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p><a href="https://www.eff.org/https-everywhere">HTTPS Everywhere</a> tells your browser to always request a secure connection if it's available.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p><a href="https://www.ghostery.com/">Ghostery</a> reveals invisible trackers embedded in pages.</p>
+
+<p><a href="https://disconnect.me/">Disconnect</a> is similar to above.</p>
+
+<p><a href="https://www.mozilla.org/en-US/lightbeam/">Lightbeam</a> also reveals invisible trackers, for Firefox only.</p>
+
+<p><a href="https://adblockplus.org/">AdBlock Plus</a> blocks banners, pop-ups and video ads.</p>
+
+<p><a href="https://crypto.cat/">CryptoCat</a> offers easy to use and accessible encrypted chat, as a browser app.</p>
+
+<p><a href="http://www.mailvelope.com/">Mailvelope</a> provides OpenPGP encryption for Google and Yahoo webmail.</p>
+
+<p><a href="https://abine.com/products/index.php">DoNotTrackMe, MaskMe, and DeleteMe</a> tools from Abine, Inc. based here in Boston.</p>
+
+<p><a href="https://duckduckgo.com/">DuckDuckGo</a> is a privacy-friendly alternative to Google search.</p>
+
+<h2>
+<a name="backups" class="anchor" href="#backups"><span class="octicon octicon-link"></span></a>Backups</h2>
+
+<p><a href="https://spideroak.com/">SpiderOak</a> and <a href="http://www.code42.com/crashplan/">CrashPlan</a> are both encryption-friendly backup services.</p>
+
+<h2>
+<a name="stuff-to-watch" class="anchor" href="#stuff-to-watch"><span class="octicon octicon-link"></span></a>Stuff to watch</h2>
+
+<p>I'm excited about things like <a href="https://pressfreedomfoundation.org/securedrop">SecureDrop</a>, <a href="https://pressfreedomfoundation.org/organization/leap-encryption-access-project">LEAP Encryption Access Project</a>, <a href="https://www.mailpile.is/">mailpile</a>, the <a href="http://darkmail.info/">Dark Mail Technical Alliance</a>, <a href="https://globaleaks.org/">GlobalLeaks</a>, <a href="http://owncloud.org/">ownCloud</a>, <a href="https://pond.imperialviolet.org/">Pond</a>, <a href="https://bitmessage.org/wiki/Main_Page">Bitmessage</a> and <a href="http://enigmabox.net/en/">Enigmabox</a>!</p>
+
+<h2>
+<a name="additional-resources" class="anchor" href="#additional-resources"><span class="octicon octicon-link"></span></a>Additional resources</h2>
+
+<p><a href="http://prism-break.org/">PRISM Break</a></p>
+
+<p>the <a href="http://key.cryptoparty.is/handbook/">CryptoParty Handbook</a></p>
+
+<p><a href="https://pressfreedomfoundation.org/encryption-works">Encryption Works: How to Protect Your Privacy in the Age of NSA Surveillance</a> by Micah Lee</p>
+
+<p><a href="https://www.propublica.org/article/a-buyers-guide-to-safer-communication">A Buyer’s Guide to Safer Communication</a> part two by Quinn Norton</p>
       </section>
     </div>
 
